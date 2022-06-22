@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "ohttp-relay",
+  "version": "1.0.0",
+  "description": "An Oblivious HTTP relay built on Cloudflare Workers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write '**/*.{js,css,json,md}'"
+  },
+  "author": "Christopher Wood <chriswood@cloudflare.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
+}

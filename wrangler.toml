@@ -1,0 +1,5 @@
+name = "ohttp-relay"
+type = "javascript"
+workers_dev = true
+account_id = <insert here>
+vars = { TARGET = "https://ohttp-echo.crypto-team.workers.dev/echo-bytes" }
