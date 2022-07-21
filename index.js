@@ -15,7 +15,7 @@ async function processResponse(response) {
 
   const { headers } = response
   const contentType = headers.get("content-type") || ""
-  if (!contentType.includes("message/ohttp-resp")) {
+  if (!contentType.includes("message/ohttp-res")) {
     return new Response('Invalid response: ' + JSON.stringify(response), { status: 400 })
   }
   
