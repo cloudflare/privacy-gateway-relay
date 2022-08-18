@@ -4,25 +4,6 @@ addEventListener('fetch', event => {
 })
 
 /**
- * Process relayed responses.
- * @param {Response} response 
- * @returns a Response object
- */
-async function processResponse(response) {
-  if (response.status != 200) {
-    return new Response('Invalid response code: ' + JSON.stringify(response), { status: 400 })
-  }
-
-  const { headers } = response
-  const contentType = headers.get("content-type") || ""
-  if (!contentType.includes("message/ohttp-res")) {
-    return new Response('Invalid response: ' + JSON.stringify(response), { status: 400 })
-  }
-  
-  return response
-}
-
-/**
  * Handle relayed requests.
  * @param {Request} request
  */
@@ -42,7 +23,7 @@ async function handleRequest(request) {
   }
 
   // Handle all other requests as relay requests
-  handleRelayRequest(request)
+  return handleRelayRequest(request)
 }
 
 async function handleRelayRequest(request) {
@@ -65,7 +46,5 @@ async function handleRelayRequest(request) {
     body: request.body,
   })
 
-  // Process and forward the response
-  const filteredResponse = await processResponse(response)
-  return filteredResponse
+  return response
 }
