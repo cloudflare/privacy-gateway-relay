@@ -1,6 +1,6 @@
-# Oblivious HTTP (OHTTP) Relay
+# Privacy Gateway Relay
 
-This Cloudflare Worker implements a simple [Oblivious HTTP](https://datatracker.ietf.org/doc/draft-ietf-ohai-ohttp/) relay. Usage of this relay adheres to the HTTP usage described [in the draft specification](https://datatracker.ietf.org/doc/html/draft-ietf-ohai-ohttp-01#section-6). The functionality here is subject to change.
+This Cloudflare Worker implements an [Oblivious HTTP](https://datatracker.ietf.org/doc/draft-ietf-ohai-ohttp/) relay. Usage of this relay adheres to the HTTP usage described [in the draft specification](https://datatracker.ietf.org/doc/html/draft-ietf-ohai-ohttp-01#section-6). The functionality here is subject to change.
 
 ## Configuration
 
